@@ -30,11 +30,13 @@
         <![endif]-->
 
         <script type="text/javascript" src="http://www.jlabstudio.com/webgl/ejemplos/js/glMatrix-0.9.5.min.js"></script>
+        <script type="text/javascript" src="http://www.jlabstudio.com/webgl/ejemplos/js/webgl-utils.js"></script>
 
-        
-        <script src="assets/examples/geometric_figures/fragment.fs" id="shader-fs" type="x-shader/x-fragment"></script>
-        <script src="assets/examples/geometric_figures/vertex.fs"  id="shader-vs" type="x-shader/x-vertex"></script>
-        <script src="assets/examples/geometric_figures/main.js" type="text/javascript"></script>
+
+
+        <script src="assets/examples/keyboard_events/fragment.fs" id="shader-fs" type="x-shader/x-fragment"></script>
+        <script src="assets/examples/keyboard_events/vertex.fs"  id="shader-vs" type="x-shader/x-vertex"></script>
+        <script src="assets/examples/keyboard_events/main.js" type="text/javascript"></script>
     </head>
 
     <body  onload="webGLStart();">
@@ -77,8 +79,16 @@
         <!-- Begin page content -->
         <div class="container">
             <div class="page-header">
-                <h1>Geometric Figures</h1>
-                <canvas id="leccion1-canvas" style="border: none;" width="500" height="500"></canvas>
+                <h1>Keyboard events and texture filters</h1>
+                <canvas id="lesson06-canvas" style="border: none;" width="500" height="500"></canvas>
+
+                <h2>Controles:</h2>
+
+                <ul>
+                    <li><code>AvPag</code>/<code>RePag</code> Hacer zoom +/-.
+                    <li>Cursores: Hacen rotar al cubo (cuanto más tiempo las pulses, más rápido girará).
+                    <li><code>F</code> para cambiar entre los diferentes tipos de filtrado de texturas.
+                </ul>
             </div>
 
         </div>

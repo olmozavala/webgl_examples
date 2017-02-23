@@ -30,11 +30,13 @@
         <![endif]-->
 
         <script type="text/javascript" src="http://www.jlabstudio.com/webgl/ejemplos/js/glMatrix-0.9.5.min.js"></script>
+        <script type="text/javascript" src="http://www.jlabstudio.com/webgl/ejemplos/js/webgl-utils.js"></script>
 
-        
-        <script src="assets/examples/geometric_figures/fragment.fs" id="shader-fs" type="x-shader/x-fragment"></script>
-        <script src="assets/examples/geometric_figures/vertex.fs"  id="shader-vs" type="x-shader/x-vertex"></script>
-        <script src="assets/examples/geometric_figures/main.js" type="text/javascript"></script>
+
+
+        <script src="assets/examples/specular_reflections/fragment.fs" id="shader-fs" type="x-shader/x-fragment"></script>
+        <script src="assets/examples/specular_reflections/vertex.fs"  id="shader-vs" type="x-shader/x-vertex"></script>
+        <script src="assets/examples/specular_reflections/main.js" type="text/javascript"></script>
     </head>
 
     <body  onload="webGLStart();">
@@ -77,8 +79,73 @@
         <!-- Begin page content -->
         <div class="container">
             <div class="page-header">
-                <h1>Geometric Figures</h1>
-                <canvas id="leccion1-canvas" style="border: none;" width="500" height="500"></canvas>
+                <h1>Specular reflections and json model</h1>
+                <canvas id="lesson14-canvas" style="border: none;" width="500" height="500"></canvas>
+
+                <div id="loadingtext">Cargando modelo...</div>
+                <br/>
+
+                <input type="checkbox" id="specular" checked /> Mostrar reflejos especulares<br/>
+                <input type="checkbox" id="lighting" checked /> Usar iluminación<br/>
+
+                Textura:
+                <select id="texture">
+                    <option value="none">Ninguna</option>
+                    <option selected value="galvanized">Galvanizado</option>
+                    <option value="earth">Tierra</option>
+                </select>
+                <br/>
+
+
+                <h2>Material:</h2>
+
+                <table style="border: 0; padding: 10px;">
+                    <tr>
+                        <td><b>Brillo:</b>
+                        <td><input type="text" id="shininess" value="32.0" />
+                    </tr>
+
+                </table>
+
+
+                <h2>Punto de iluminación:</h2>
+
+                <table style="border: 0; padding: 10px;">
+                    <tr>
+                        <td><b>Posición:</b>
+                        <td>X: <input type="text" id="lightPositionX" value="-10.0" />
+
+                        <td>Y: <input type="text" id="lightPositionY" value="4.0" />
+                        <td>Z: <input type="text" id="lightPositionZ" value="-20.0" />
+                    </tr>
+                    <tr>
+                        <td><b>Color especular:</b>
+                        <td>R: <input type="text" id="specularR" value="0.8" />
+                        <td>G: <input type="text" id="specularG" value="0.8" />
+
+                        <td>B: <input type="text" id="specularB" value="0.8" />
+                    </tr>
+                    <tr>
+                        <td><b>Color difuso:</b>
+                        <td>R: <input type="text" id="diffuseR" value="0.8" />
+                        <td>G: <input type="text" id="diffuseG" value="0.8" />
+                        <td>B: <input type="text" id="diffuseB" value="0.8" />
+
+                    </tr>
+                </table>
+
+
+                <h2>Iluminación de ambiente:</h2>
+
+                <table style="border: 0; padding: 10px;">
+                    <tr>
+                        <td><b>Color:</b>
+
+                        <td>R: <input type="text" id="ambientR" value="0.2" />
+                        <td>G: <input type="text" id="ambientG" value="0.2" />
+                        <td>B: <input type="text" id="ambientB" value="0.2" />
+                    </tr>
+                </table>
             </div>
 
         </div>

@@ -30,11 +30,13 @@
         <![endif]-->
 
         <script type="text/javascript" src="http://www.jlabstudio.com/webgl/ejemplos/js/glMatrix-0.9.5.min.js"></script>
+        <script type="text/javascript" src="http://www.jlabstudio.com/webgl/ejemplos/js/webgl-utils.js"></script>
 
-        
-        <script src="assets/examples/geometric_figures/fragment.fs" id="shader-fs" type="x-shader/x-fragment"></script>
-        <script src="assets/examples/geometric_figures/vertex.fs"  id="shader-vs" type="x-shader/x-vertex"></script>
-        <script src="assets/examples/geometric_figures/main.js" type="text/javascript"></script>
+
+
+        <script src="assets/examples/3d_world/fragment.fs" id="shader-fs" type="x-shader/x-fragment"></script>
+        <script src="assets/examples/3d_world/vertex.fs"  id="shader-vs" type="x-shader/x-vertex"></script>
+        <script src="assets/examples/3d_world/main.js" type="text/javascript"></script>
     </head>
 
     <body  onload="webGLStart();">
@@ -77,8 +79,14 @@
         <!-- Begin page content -->
         <div class="container">
             <div class="page-header">
-                <h1>Geometric Figures</h1>
-                <canvas id="leccion1-canvas" style="border: none;" width="500" height="500"></canvas>
+                <h1>3d World</h1>
+                <canvas id="lesson10-canvas" style="border: none;" width="500" height="500"></canvas>
+
+                <div id="loadingtext">Cargando el mundo...</div>
+
+                <br/>
+                Usa WSAD o los cursores para moverte, y <code>AvPag</code>/<code>RePag</code> para mirar arriba y abajo.
+
             </div>
 
         </div>
